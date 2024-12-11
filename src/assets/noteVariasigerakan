@@ -1,0 +1,71 @@
+useEffect(() => {
+    // Animasi katana (berputar seperti pedang)
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        start: "0% 95%",
+        end: "70% 50%",
+        scrub: true,
+        // markers: true,
+      }
+    });
+  
+    tl.to("#can", {
+      top: "95%",
+      left: "12%",
+      rotate: "360deg", // Rotasi penuh (berputar)
+      x: 50,            // Gerakan horizontal
+      y: -30,           // Gerakan vertikal
+    }, 'katana')
+      .to("#choclate", {
+        top: "160%",
+        left: "23%"
+      }, 'katana')
+      .to("#choclate2", {
+        width: "25%",
+        top: "160%",
+        right: "10%",
+        rotate: "-15deg"
+      }, 'katana')
+      .to("#almod", {
+        top: "110%",
+        rotate: "130deg",
+        left: "70%"
+      }, 'katana')
+      .to("#almod2", {
+        top: "110%",
+        rotate: "130deg",
+        left: "0%"
+      }, 'katana');
+  
+    // Animasi lainnya (product section)
+    var tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".product",
+        start: "0% 95%",
+        end: "20% 50%",
+        scrub: true,
+        // markers: true,
+      }
+    });
+  
+    tl2.to("#choclate", {
+      width: "28%",
+      left: "42%",
+      top: "214%"
+    }, 'can')
+      .to("#choclate2", {
+        width: "15%",
+        left: "35%",
+        top: "288%"
+      }, 'can')
+      .to("#can", {
+        width: "30%",
+        top: "222%",
+        left: "35%",
+        rotate: "0deg",
+        x: 0,   // Reset posisi horizontal
+        y: 0    // Reset posisi vertikal
+      }, 'can');
+  }, []);
+  

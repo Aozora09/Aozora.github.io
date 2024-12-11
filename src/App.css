@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+html, body {
+    scroll-behavior: smooth; /* Menambahkan efek smooth scrolling */
+  }
+  
+  h-screen {
+    height: 100vh; /* Tinggi penuh untuk setiap section */
+  }
+
+   /* body::-webkit-scrollbar {
+    display: none;
+  } */
+  
+  /* coba project */
+.transition-opacity {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.transition-opacity2 {
+  transition: opacity 0s ease-in-out;
+}
+
+/* File CSS, misal: App.css */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.slide-in-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.slide-in-top {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.slide-in-bottom {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+.drop-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "figtree", serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+/*Chocolate*/
+
+#main{
+    width: 100%;
+    min-height: 100vh; /* Memastikan minimal setinggi viewport */
+    height: auto; /* Menyesuaikan dengan isi konten */
+    display: flex;
+    flex-direction: column; /* Agar konten vertikal berurutan */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/chocolate/kyoto.png);
+    background-size: cover; /* Gambar menutupi seluruh area */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header h1{
+    font-size: 18vw;
+    font-family: "EB Garamond", serif;
+    color: #fff;
+}
+
+#can{
+    position: absolute;
+    width: 15%;
+    /*width: 35%;*/
+    z-index: 2;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+#choclate{
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    width: 25%;
+    z-index: 1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
+}
+
+#choclate2{
+    position: absolute;
+    width: 15%;
+    z-index: 3;
+    top: 70%;
+    right: 35%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
+}
+
+#almod{
+    top: 10%;
+    left: 5%;
+    transform: rotate(60deg);
+    position: absolute;
+    width: 7%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
+}
+
+#almod2{
+    top: 70%;
+    left: 80%;
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 10%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+
+}
+
+
+.about-left, .about-right{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    width: 50%;
+    height: 100%;
+}
+
+.about-left img{
+    margin-top: 45vh;
+    width: 90%;
+    transform: rotateX(50deg);
+}
+
+.about-right h1{
+    color: #fff;
+    font-size: 5vw;
+}
+
+.about-right p{
+    font-size: 1vw;
+    color: #fff;
+    width: 80%;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+.product img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
